@@ -31,18 +31,22 @@ buyOrPass(100, 180);
 console.log(" ");
 
 
-// object
+// count in odd numbers
 // 8 kyu
-function Player() {
-	var player = {
-		name: "Player",
-		position: "Right Winger",
-		age: 25,
-		dribbling: 85,
-		pass: 70,
-		shoot: 65 
+function  kidoCount(n){
+	var x = [];
+	for (i = 1; i < n; i = i + 2) {
+		x.push(i);
 	}
+	return x;
 }
+console.log(kidoCount(10));
+
+
+
+
+
+
 
 
 
