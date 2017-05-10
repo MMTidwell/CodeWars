@@ -102,4 +102,43 @@
     repeatStr(5, "#");
     repeatStr(2, "ha ");
     console.log("");
+
+
+    // turn int into negative int
+    function makeNegative(num) {
+        if (num > 0) {
+            return num * -1;
+        } else if (num == 0) {
+            return 0;
+        } else {
+            return num;
+        }
+    }
+    console.log(makeNegative(42));
+    console.log(makeNegative(-6));
+    console.log(makeNegative(0));
+    console.log("");
+
+
+    // get cuboid
+    var Kata;
+
+    Kata = (function() {
+      function Kata() {}
+
+      Kata.getVolumeOfCuboid = function(length, width, height) {
+        return ((length * width) * height);
+      };
+
+      return Kata;
+
+    })();
+    console.log(Kata.getVolumeOfCuboid(1,2,2));
+    console.log(Kata.getVolumeOfCuboid(6.3,2,5));
+
+
+
+
+
+
 })();
