@@ -135,6 +135,45 @@
     })();
     console.log(Kata.getVolumeOfCuboid(1,2,2));
     console.log(Kata.getVolumeOfCuboid(6.3,2,5));
+    console.log("");
+
+
+    // count
+    function hoopCount (n) {
+        var count = (n < 10) ? "Keep at it until you get it" : "Great, now move on to tricks";
+        console.log(count);
+    }
+    hoopCount(3)
+    hoopCount(11)
+    console.log('');
+
+
+    function math(x, y, z) {
+        if (x == "+") {
+            console.log(y + z);
+        } else if (x == "-") {
+            console.log(y - z);
+        } else if (x == "/") {
+            console.log(y / z);
+        } else {
+            console.log(y * z);
+        }
+    }
+    math("+", 2, 3);
+    math("-", 2, 3);
+    math("/", 2, 3);
+    math("*", 2, 3);
+    console.log("");
+
+
+    function removeSpace(str) {
+        str = str.split(" ");
+        var newString = str.join("");
+        console.log(newString);
+    }
+    removeSpace("This is a string");
+    console.log("");
+    
 
 
 
