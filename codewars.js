@@ -148,6 +148,7 @@
     console.log('');
 
 
+    // math time
     function math(x, y, z) {
         if (x == "+") {
             console.log(y + z);
@@ -166,6 +167,7 @@
     console.log("");
 
 
+    // remove spaces in a string
     function removeSpace(str) {
         str = str.split(" ");
         var newString = str.join("");
@@ -173,7 +175,41 @@
     }
     removeSpace("This is a string");
     console.log("");
-    
+
+
+    // for if comparison
+    function openOrSenior(data){
+      var status = [];
+      for (var i = 0; i < data.length; i++) {
+        if (data[i][0] >= 55 && data[i][1] > 7) {
+            status.push("Senior");
+        } else {
+            status.push("Open");
+        }
+      }
+        console.log(status);
+    }
+    openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]);
+    openOrSenior([[3, 12],[55,1],[91, -2],[54, 23]]);
+    openOrSenior([[59, 12],[55,-1],[12, -2],[12, 12]]);
+    console.log("");
+
+
+    // find the largest and smallest number in a string
+    function highAndLow(numbers){
+        var maxMin = [];
+
+        numbers = numbers.split(" ");
+        maxMin.push(Math.max.apply(null, numbers), Math.min.apply(null, numbers));
+        maxMin = maxMin.join(" ");
+
+        console.log(maxMin);
+    }
+    highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6");
+    highAndLow("1 -1");
+    highAndLow("1 1");
+    console.log("");
+
 
 
 
