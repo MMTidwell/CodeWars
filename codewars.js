@@ -211,8 +211,56 @@
     console.log("");
 
 
+    // string position
+    function countSmileys(arr) {
+        var count = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].length > 2) {
+                if (arr[i][0] == ":" || arr[i][0] == ";") {
+                    if (arr[i][1] == "-" || arr[i][1] == "~") {
+                        if (arr[i][2] == ")" || arr[i][2] == "D") {
+                            count++;
+                        }
+                    }
+                }
+            } else {
+                if (arr[i][0] == ":" || arr[i][0] == ";") {
+                    if (arr[i][1] == ")" || arr[i][1] == "D") {
+                        count++;
+                    }
+                }
+            }
+        }
+        console.log(count);
+    }
+    countSmileys([]);
+    countSmileys([':D',':~)',';~D',':)']);
+    countSmileys([':)',':(',':D',':O',':;']);
+    countSmileys([';]', ':[', ';*', ':$', ';-D']);
+    console.log("");
 
 
+    function DNAStrand(dna){
+        var haskell = [];
+        dna = dna.split("");
+        for (var i = 0; i < dna.length; i++) {
+            if (dna[i] == "A") {
+                haskell.push("T");
+            } else if (dna[i] == "T") {
+                haskell.push(("A"));
+            } else if (dna[i] == "C") {
+                haskell.push("G");
+            } else if (dna[i] == "G") {
+                haskell.push("C");
+            }
+        }
+        haskell = haskell.join("")
+        console.log(haskell);
+    }
+    DNAStrand("AAAA");
+    DNAStrand("ATTGC");
+    DNAStrand("GTAT");
+    console.log("");
 
 
 
