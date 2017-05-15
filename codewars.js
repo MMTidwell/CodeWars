@@ -263,5 +263,45 @@
     console.log("");
 
 
+    // math
+    function arithmetic(a, b, operator){
+        if (operator == "add") {
+            console.log(a + b);
+        } else if (operator == "subtract") {
+            console.log(a - b);
+        } else if (operator == "multiply") {
+            console.log(a * b);
+        } else {
+            console.log(a / b);
+        }
+    }
+    arithmetic(1, 2, "add");
+    arithmetic(8, 2, "subtract");
+    arithmetic(5, 2, "multiply");
+    arithmetic(8, 2, "divide");
+    console.log("");
+
+
+    // average rounded
+    function average(scores) {
+        var total = eval(scores.join('+'));
+        var average = Math.round(total / scores.length);
+
+        console.log(average);
+    }
+    average([49,3,5,300,7]);
+    average([90,98,89,100,100,86,94]);
+    console.log("");
+
+
+    // greetings
+    function greet(name) {
+        return (name === "" || name === null) ? null : "Hello " + name;
+    }
+    console.log(greet("Niks"));
+    console.log(greet(null));
+
+
+
 
 })();
