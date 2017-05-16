@@ -300,6 +300,72 @@
     }
     console.log(greet("Niks"));
     console.log(greet(null));
+    console.log("");
+
+
+    // cap first letter of every word
+    String.prototype.toJadenCase = function () {
+        str = str.toLowerCase().split(" ");
+        for (var i = 0; i < str.length; i++) {
+            str[i] = str[i].split("");
+            str[i][0] = str[i][0].toUpperCase();
+            str[i] = str[i].join("");
+        }
+        console.log(str.join(" "));
+    };
+    var str = "How can mirrors be real if our eyes aren't real";
+    str.toJadenCase();
+    console.log("");
+
+
+    // count number of times value shows up in array
+    Array.prototype.numberOfOccurrences = function(element) {
+        var count = 0;
+        for (var i = 0; i < this.length; i++) {
+            if (this[i] == element) {
+                count++;
+            }
+        }
+        console.log(count);
+    }
+    var arr = [4, 0, 4];
+    arr.numberOfOccurrences(4);
+    console.log("");
+
+
+    // vowel removal
+    function disemvowel(str) {
+        var vowels = ['a', 'e', 'i', 'o', 'u'];
+        return str.split('').filter(function(el) {
+            return vowels.indexOf(el.toLowerCase()) == -1;
+        }).join('');
+    }
+    console.log(disemvowel("This website is for losers LOL!"));
+    console.log("");
+
+
+    // shortest word
+    function findShort(s){
+        var s = s.split(" ");
+        // gets the length of each array
+        var min = s[0].length;
+        for (var i = 0; i < s.length; i++) {
+            // checks the word length to the current word length
+            if (s[i].length < min) {
+                // sets min to the new shortest length
+                min = s[i].length;
+            }
+        }
+        console.log(min);
+    }
+    findShort("bitcoin take over the world maybe who knows perhaps")
+    findShort("turns out random test cases are easier than writing out basic ones")
+
+
+
+
+
+
 
 
 
