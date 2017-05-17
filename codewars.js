@@ -360,6 +360,99 @@
     }
     findShort("bitcoin take over the world maybe who knows perhaps")
     findShort("turns out random test cases are easier than writing out basic ones")
+    console.log();
+
+
+    // reverse string
+    function solution(str){
+        str = str.split("").reverse().join("");
+        console.log(str);
+    }
+    solution('world');
+    console.log();
+
+
+    // JS object mapping
+    function toLetSpeak(str) {
+        var alpha = {
+            A : '@',
+            B : '8',
+            C : '(',
+            D : 'D',
+            E : '3',
+            F : 'F',
+            G : '6',
+            H : '#',
+            I : '!',
+            J : 'J',
+            K : 'K',
+            L : '1',
+            M : 'M',
+            N : 'N',
+            O : '0',
+            P : 'P',
+            Q : 'Q',
+            R : 'R',
+            S : '$',
+            T : '7',
+            U : 'U',
+            V : 'V',
+            W : 'W',
+            X : 'X',
+            Y : 'Y',
+            Z : '2'
+        };
+        // splits the string
+        // compares the char to the key if found gives the keys result
+        // if char is not a key, then it will place the char it looked for
+        // joins the array and turns it into an array
+        str = str.split("").map(char => alpha[char] || char).join("");
+        console.log(str);
+    }
+    toLetSpeak("LEET");
+    toLetSpeak("SPEAK!");
+    toLetSpeak("HERE");
+    console.log();
+
+
+    // sort by string length
+    function sortByLength (array) {
+        array = array.sort((a, b) => a.length - b.length);
+        console.log(array);
+    };
+    sortByLength(["Beg", "Life", "I", "To"]);
+    console.log();
+
+
+    // removing parts of a string
+    function domainName(str) {
+        var n = str.includes("http://www.")
+        var o = str.includes("www.")
+        if (n == true) {
+            str = str.split("http://www.").pop();
+        } else if (o == true) {
+            str = str.split("www.").pop();
+        } else {
+            str = str.split("http://").pop();
+        }
+        str = str.split(".")[0];
+
+        console.log(str);
+    }
+    domainName("http://github.com/carbonfive/raygun")
+    domainName("http://www.zombie-bites.com")
+    domainName("www.xakep.ru")
+    console.log();
+
+
+
+
+
+
+
+
+
+
 
 
 
