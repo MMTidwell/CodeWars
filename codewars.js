@@ -479,21 +479,6 @@
     console.log();
 
 
-// sorting numbers
-function sortArray(array) {
-    var newArray = [];
-    for (var i = 0; i < array.length; i++) {
-        if (array[i] % 2 == 0) {
-            newArray.push(array[i]);
-        } else {
-            newArray.push(Math.min(array[i]));
-        }
-    }
-    console.log(newArray);
-}
-sortArray([5, 3, 2, 8, 1, 4]);
-sortArray([5, 3, 1, 8, 0]);
-sortArray([]);
 
 
 
