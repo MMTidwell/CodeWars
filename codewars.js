@@ -445,17 +445,55 @@
     console.log();
 
 
+    // math
+    function persistence(num) {
+        var count = 0;
+        num = num.toString();
+
+        while (num.length > 1) {
+            count++;
+            num = num.split("").map(Number).reduce((a, b) => a * b).toString();
+        }
+        console.log(count);
+    }
+    persistence(39);
+    persistence(4);
+    persistence(25);
+    persistence(999);
+    console.log();
 
 
+    // check if element is a number
+    function filter_list(l) {
+        var newList = [];
+        for (var i = 0; i < l.length; i++) {
+            if (typeof l[i] != 'string') {
+                newList.push(l[i]);
+            }
+        }
+        console.log(newList);
+    }
+    filter_list([1,2,'a','b']);
+    filter_list([1,'a','b',0,15]);
+    filter_list([1,2,'aasf','1','123',123]);
+    console.log();
 
 
-
-
-
-
-
-
-
+// sorting numbers
+function sortArray(array) {
+    var newArray = [];
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] % 2 == 0) {
+            newArray.push(array[i]);
+        } else {
+            newArray.push(Math.min(array[i]));
+        }
+    }
+    console.log(newArray);
+}
+sortArray([5, 3, 2, 8, 1, 4]);
+sortArray([5, 3, 1, 8, 0]);
+sortArray([]);
 
 
 
