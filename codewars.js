@@ -479,6 +479,46 @@
     console.log();
 
 
+    // word swap
+    function rakeGarden(garden) {
+        garden = garden.split(" ");
+
+        for (var i = 0; i < garden.length; i++) {
+            if (garden[i] != "rock" && garden[i] != "gravel") {
+                garden[i] = "gravel"
+            }
+        }
+        garden = garden.join(" ");
+        console.log(garden);
+    }
+    var garden1 = 'slug spider rock gravel gravel gravel gravel gravel gravel gravel';
+    var garden2 = 'gravel gravel gravel gravel gravel gravel gravel gravel gravel rock slug ant gravel gravel snail rock gravel gravel gravel gravel gravel gravel gravel slug gravel ant gravel gravel gravel gravel rock slug gravel gravel gravel gravel gravel snail gravel gravel rock gravel snail slug gravel gravel spider gravel gravel gravel gravel gravel gravel gravel gravel moss gravel gravel gravel snail gravel gravel gravel ant gravel gravel moss gravel gravel gravel gravel snail gravel gravel gravel gravel slug gravel rock gravel gravel rock gravel gravel gravel gravel snail gravel gravel rock gravel gravel gravel gravel gravel spider gravel rock gravel gravel';
+    rakeGarden(garden1);
+    rakeGarden(garden2);
+    console.log();
+
+
+    // population growth
+    function nbYear(p0, percent, aug, p) {
+        var years = 0;
+        while (p0 < p) {
+            p0 = p0 + p0 * (percent / 100) + aug;
+            years++;
+        }
+        console.log(years);
+    }
+    nbYear(1500, 5, 100, 5000);
+    nbYear(1500000, 2.5, 10000, 2000000);
+    nbYear(1500000, 0.25, 1000, 2000000);
+    console.log();
+
+
+
+
+
+
+
+
 
 
 
