@@ -513,7 +513,20 @@
     console.log();
 
 
-
+    // array search
+    var moveZeros = function (arr) {
+        var zero = [];
+        var newArray = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] === 0) {
+                zero.push(arr[i]);
+            } else {
+                newArray.push(arr[i]);
+            }
+       }    
+       console.log(newArray.concat(zero));
+    }
+    moveZeros([false,1,0,1,2,0,1,3,"a"])
 
 
 
