@@ -523,10 +523,46 @@
             } else {
                 newArray.push(arr[i]);
             }
-       }    
+       }
        console.log(newArray.concat(zero));
     }
-    moveZeros([false,1,0,1,2,0,1,3,"a"])
+    moveZeros([false,1,0,1,2,0,1,3,"a"]);
+    console.log("");
+
+
+    // Build a tower
+    function towerBuilder(nFloors) {
+        var level = [];
+        for (var i = 0; i < nFloors; i++) {
+            // places the " " at the beginning of the array string
+            level.push(" ".repeat(nFloors - i - 1)
+                // places the * for each level
+                + "*".repeat((i * 2) + 1)
+                // places the " " at the end of each array string
+                + " ".repeat(nFloors - i - 1));
+        }
+        console.log(level);
+    }
+    towerBuilder(1);
+    towerBuilder(2);
+    towerBuilder(3);
+    towerBuilder(4);
+    console.log();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
