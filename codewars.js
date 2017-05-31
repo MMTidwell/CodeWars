@@ -550,10 +550,24 @@
     console.log();
 
 
+    // months to save for car
+    function nbMonths(C, N, S, L) {
+        var months = 0;
+        var total = 0;
 
+        while (N > C + total) {
+            total += S;
+            C -= (C * (L / 100));
+            N -= (N * (L / 100));
+            months++
 
-
-
+            if (months % 2 == 1) {
+                L += 0.5;
+            }
+        }
+        console.log([months, Math.round((C + total) - N)]);
+    }
+    nbMonths(2000, 8000, 1000, 1.5);
 
 
 
